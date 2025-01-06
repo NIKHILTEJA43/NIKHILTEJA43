@@ -16,3 +16,13 @@ public:
         }
 
         // Convert the result to a string, removing leading zeros
+        string res;
+        for (int num : result) {
+            if (!(res.empty() && num == 0)) {
+                res.push_back(num + '0');
+            }
+        }
+
+        return res.empty() ? "0" : res;
+    }
+};
