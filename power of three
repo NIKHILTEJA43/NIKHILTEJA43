@@ -1,0 +1,11 @@
+class Solution {
+public:
+    bool isPowerOfThree(int n) {
+        // Edge case: n must be positive
+        if (n <= 0) return false;
+
+        // Check if log base 3 of n is an integer
+        double logResult = log10(n) / log10(3);
+        return floor(logResult) == logResult;
+    }
+};
