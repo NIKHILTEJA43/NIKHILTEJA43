@@ -1,0 +1,9 @@
+class Solution {
+public:
+    bool isPowerOfTwo(int n) {
+        // Edge case: n must be positive
+        if (n <= 0) return false;
+        // A number is a power of two if it has exactly one '1' bit in its binary representation
+        return (n & (n - 1)) == 0;
+    }
+};
